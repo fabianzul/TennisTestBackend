@@ -1,19 +1,14 @@
 version: 0.2
 
 phases:
-  install:
-    runtime-versions:
-      java: corretto8
   build:
     commands:
-      - echo Build started on `date`
-      - mvn test
+      - echo Entered the build phase...
+      - mvn clean package
   post_build:
     commands:
-      - echo Build completed on `date`
-      - mvn package
+      - echo Build completed successfully
 artifacts:
   files:
-    - target/my-app-1.0-SNAPSHOT.jar
-    - appspec.yml
+    - target/tennis-test-backend.jar
   discard-paths: yes

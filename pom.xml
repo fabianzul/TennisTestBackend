@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.tennis</groupId>
-	<artifactId>revision</artifactId>
+	<artifactId>tennis-test-backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>revision</name>
+	<name>tennis-test-backend</name>
 	<description>Test project for job application. REST app. Product revision control.</description>
 	<properties>
 		<java.version>1.8</java.version>
@@ -45,6 +45,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<finalName>tennis-test-backend</finalName>
 	</build>
 
 </project>
