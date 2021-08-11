@@ -30,9 +30,15 @@ public class ClientController {
             return new ResponseEntity<Client>(HttpStatus.NOT_FOUND);
         }
     }
-    @PostMapping("/")
-    public void add(@RequestBody Client client) {
-        clientService.saveClient(client);
+    @PostMapping("")
+    public ResponseEntity<Client> add(@RequestBody Client client) {
+        try {
+            clientService.saveClient(client);
+            System.out.println(client);
+            return new ResponseEntity<Client>(client, HttpStatus.OK);
+        } catch (Error error){
+            return new ResponseEntity<Client>(HttpStatus.BAD_REQUEST);
+        }
     }
     @PutMapping("/{id}")
     public ResponseEntity<?> update(@RequestBody Client client, @PathVariable Integer id) {
