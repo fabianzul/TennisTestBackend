@@ -134,4 +134,5 @@ public class RevisionTicket {
     public void setDate_receive(Timestamp date_receive) {
         this.date_receive = date_receive;
     }
+
 }
